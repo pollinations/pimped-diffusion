@@ -48,7 +48,8 @@ pimped: Humanoid figure with an artichoke head, highly detailed, digital art, sh
 prompt: A boy and a girl with black short hair in a rowing boat
 pimped: A boy and a girl with long flowing auburn hair sitting together on the rowboat. boy has black short hair, boy has black short hair. atmospheric lighting, long shot, romantic, boy and girl are the focus, trees, river. details, sharp focus, illustration, by jordan grimmer and greg rutkowski, trending artstation, pixiv, digital art
 
-prompt: {}""".format
+prompt: {}
+pimped:""".format
 
 
 
