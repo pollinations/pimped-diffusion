@@ -1,11 +1,14 @@
 # Prediction interface for Cog ⚙️
 # https://github.com/replicate/cog/blob/main/docs/python.md
 
-from cog import BasePredictor, Input, Path
 import os
-import openai
 from glob import glob
+from re import L
+
+import openai
+from cog import BasePredictor, Input, Path
 from dotenv import load_dotenv
+
 load_dotenv()
 from pypollsdk import Model
 
@@ -75,8 +78,10 @@ class Predictor(BasePredictor):
             n=3,
             stop=["prompt:"]
         ).choices
-        prompts = [i.text.strip() for i in response]
+        prompts = [i.text.strip().replace("pimped: ", "") for i in response]
+
+
         prompts = "\n".join(prompts)
         print("prompts:", prompts)
-        self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1}, "/outputs")
+        self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs")
         return
