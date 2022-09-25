@@ -1,6 +1,7 @@
 # Prediction interface for Cog ⚙️
 # https://github.com/replicate/cog/blob/main/docs/python.md
 
+import json
 import os
 from glob import glob
 from re import L
@@ -55,6 +56,9 @@ prompt: {}
 pimped:""".format
 
 
+def report_status(**kwargs):
+    status = json.dumps(kwargs)
+    print(f"pollen_status: {status}")
 
 
 class Predictor(BasePredictor):
@@ -70,6 +74,10 @@ class Predictor(BasePredictor):
         prompt: str,
     ) -> Path:
         """Run a single prediction on the model"""
+
+        # JSON encode {title: "Pimping your prompt", payload: prompt }
+
+        report_status(title="Pimping prompt with GPT-3", payload=prompt)
         response = openai.Completion.create(
             model="text-davinci-002",
             prompt=gpt_prompt(prompt),
@@ -79,9 +87,11 @@ class Predictor(BasePredictor):
             stop=["prompt:"]
         ).choices
         prompts = [i.text.strip().replace("pimped: ", "") for i in response]
-
+        report_status(title="Running stable diffusion", payload="\n".join(prompts))
 
         prompts = "\n".join(prompts)
         print("prompts:", prompts)
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs")
+        report_status(title="Done")
+
         return
