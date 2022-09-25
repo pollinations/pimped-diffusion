@@ -91,6 +91,7 @@ class Predictor(BasePredictor):
 
         prompts = "\n".join(prompts)
         print("prompts:", prompts)
+        
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs")
         report_status(title="Done")
         return
