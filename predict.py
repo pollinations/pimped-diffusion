@@ -91,15 +91,19 @@ class Predictor(BasePredictor):
         report_status(title="Translating to English", payload=prompt)
         prompt = self.translator.translate(prompt.strip()).text 
         report_status(title="Pimping prompt", payload=prompt)
-        response = openai.Completion.create(
-            model="text-davinci-002",
-            prompt=gpt_prompt(prompt),
-            max_tokens=200,
-            temperature=0.82,
-            n=3,
-            stop=["prompt:", "\n"]
-        ).choices
-        prompts_list = [i.text.strip().replace("pimped: ", "") for i in response]
+        prompts_list = []
+        while len(prompts_list) != 3:
+            response = openai.Completion.create(
+                model="text-davinci-002",
+                prompt=gpt_prompt(prompt),
+                max_tokens=200,
+                temperature=0.82,
+                n=3,
+                stop=["prompt:", "\n"]
+            ).choices
+            prompts_list = [i.text.strip().replace("pimped:", "") for i in response]
+            prompts_list = [prompt for prompt in prompts_list if len(prompt) > 0]
+            print("got prompts", len(prompts_list))
         prompts = "\n".join(prompts_list)
         report_status(title="Generating images", payload=prompts)
 
