@@ -88,7 +88,7 @@ class Predictor(BasePredictor):
         """Run a single prediction on the model"""
 
         # JSON encode {title: "Pimping your prompt", payload: prompt }
-        report_status(title="Translating to English", payload=prompt)
+        report_status(title="Translating", payload=prompt)
         prompt = self.translator.translate(prompt.strip()).text 
         report_status(title="Pimping prompt", payload=prompt)
         prompts_list = []
