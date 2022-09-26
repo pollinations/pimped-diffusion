@@ -114,7 +114,7 @@ class Predictor(BasePredictor):
             
             # create .txt file with same name as image
             prompt_filename =  os.path.splitext(os.path.basename(image))[0]+".txt"
-            with open(prompt_filename, "w") as prompt_file:
+            with open("/outputs/"+prompt_filename, "w") as prompt_file:
                 prompt_file.write(prompts_list[i])
                 print("wrote",prompts_list[i],"to file", prompt_filename)
         
