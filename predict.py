@@ -84,7 +84,7 @@ class Predictor(BasePredictor):
 
         # JSON encode {title: "Pimping your prompt", payload: prompt }
 
-        report_status(title="1) Pimping prompt with GPT-3", payload=prompt)
+        report_status(title="Pimping prompt", payload=prompt)
         response = openai.Completion.create(
             model="text-davinci-002",
             prompt=gpt_prompt(prompt),
@@ -94,11 +94,11 @@ class Predictor(BasePredictor):
             stop=["prompt:"]
         ).choices
         prompts = [i.text.strip().replace("pimped: ", "") for i in response]
-        report_status(title="2) Generating images for pimped prompts", payload="\n".join(prompts))
+        report_status(title="Generating images", payload="\n".join(prompts))
 
         prompts = "\n".join(prompts)
         print("prompts:", prompts)
 
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
-        report_status(title="3) Done", payload=prompts)
+        report_status(title="Display", payload=prompts)
         return
