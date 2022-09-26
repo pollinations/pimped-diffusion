@@ -8,8 +8,6 @@ build:
   # a list of ubuntu apt packages to install
   system_packages:
     - "curl"
-    # - "libgl1-mesa-glx"
-    # - "libglib2.0-0"
 
   # python version in the form '3.8' or '3.8.12'
   python_version: "3.8"
@@ -18,9 +16,9 @@ build:
   python_packages:
     - "openai==0.23.0"
     - "python-dotenv==0.21.0"
-    # - "numpy==1.19.4"
-    # - "torch==1.8.0"
-    # - "torchvision==0.9.0"
+    - "supabase==0.5.8"
+    - "httpx==0.21.3"
+    - "pytest==7.1.2"
   
   # commands run after the environment is setup
   run:
@@ -30,10 +28,5 @@ build:
     - "cd pollinations-ipfs && npm run install_backend"
     - "pip install git+https://github.com/pollinations/pypollsdk.git"
     - pip install googletrans==3.1.0a0
-
-
-    # - "echo env is ready!"
-    # - "echo another command if needed"
   
-# predict.py defines how predictions are run on your model
 predict: "predict.py:Predictor"
