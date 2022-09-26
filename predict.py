@@ -108,7 +108,7 @@ class Predictor(BasePredictor):
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
         report_status(title="Display", payload=prompts)
 
-        for i, image in enumerate(glob("/outputs/*.png")):
+        for i, image in enumerate(glob("/outputs/stable-diffusion/*.png")):
             # move image to /outputs
             os.system(f"mv -v {image} /outputs")
             
