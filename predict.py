@@ -94,7 +94,7 @@ class Predictor(BasePredictor):
             max_tokens=200,
             temperature=0.82,
             n=3,
-            stop=["prompt:"]
+            stop=["prompt:", "\n"]
         ).choices
         prompts = [i.text.strip().replace("pimped: ", "") for i in response]
         report_status(title="Generating images", payload="\n".join(prompts))
