@@ -16,9 +16,8 @@ build:
   python_packages:
     - "openai==0.23.0"
     - "python-dotenv==0.21.0"
-    - "supabase==0.5.8"
-    - "httpx==0.21.3"
     - "pytest==7.1.2"
+    - "googletrans==3.1.0a0"
   
   # commands run after the environment is setup
   run:
