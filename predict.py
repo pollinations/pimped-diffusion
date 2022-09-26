@@ -113,7 +113,7 @@ class Predictor(BasePredictor):
             os.system(f"mv -v {image} /outputs")
             
             # create .txt file with same name as image
-            prompt_filename =  os.path.splitext(os.path.basename(image))+".txt"
+            prompt_filename =  os.path.splitext(os.path.basename(image))[0]+".txt"
             with open(prompt_filename, "w") as prompt_file:
                 prompt_file.write(prompts_list[i])
         
