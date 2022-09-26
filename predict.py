@@ -107,13 +107,13 @@ class Predictor(BasePredictor):
 
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
         report_status(title="Display", payload=prompts)
-        
+
         for i, image in enumerate(glob("/outputs/*.png")):
             # move image to /outputs
             os.system(f"mv -v {image} /outputs")
             
             # create .txt file with same name as image
-            prompt_filename = os.path.splitext(image)+".txt"
+            prompt_filename =  os.path.splitext(os.path.basename(image))+".txt"
             with open(prompt_filename, "w") as prompt_file:
                 prompt_file.write(prompts_list[i])
         
