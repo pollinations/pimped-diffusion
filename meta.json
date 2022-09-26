@@ -5,7 +5,7 @@
     "name": "Pimped Diffusion",
     "img": "https://ipfs.pollinations.ai/ipfs/QmVDhv4XjHJgH8NoXgJi1hfY87VfWdiJUxnWt5zHbhkaGW?filename=00003.png",
     "path": "pimpeddiffusion",
-    "category": "0 Featured",
+    "category": "1 Text-To-Image",
     "credits": "stability.ai, pollinations",
     "description": "<img src=\"https://ipfs.pollinations.ai/ipfs/QmVDhv4XjHJgH8NoXgJi1hfY87VfWdiJUxnWt5zHbhkaGW?filename=00003.png\"/>\n\n\nPimps the prompt using GPT-3 and runs Stable Diffusion on the pimped prompts.",
     "pollinator_group": [
