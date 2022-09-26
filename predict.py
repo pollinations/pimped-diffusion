@@ -53,6 +53,12 @@ pimped: Humanoid figure with an artichoke head, highly detailed, digital art, sh
 prompt: A boy and a girl with black short hair in a rowing boat
 pimped: A boy and a girl with long flowing auburn hair sitting together on the rowboat. boy has black short hair, boy has black short hair. atmospheric lighting, long shot, romantic, boy and girl are the focus, trees, river. details, sharp focus, illustration, by jordan grimmer and greg rutkowski, trending artstation, pixiv, digital art
 
+prompt: Diagram of a bird
+pimped: A patent drawing of mechanical bird robots, birds of all kinds, infographic, intricate drawing, 1960s advertising, watercolour, ink drawing, patent drawing, wireframe, technical and mechanical details, descriptions, explosion drawing, cad
+
+prompt: Coffee grinder
+pimped: drawn coffee grinder in the style of thomas edison, patent filing, detailed, hd
+
 prompt: {}
 pimped:""".format
 
