@@ -28,6 +28,7 @@ If a style is proving elusive, try 'doubling down' with related terms (artists, 
 
 Detailed prompts are great if you know exactly what you're looking for and are trying to get a specific effect. …but DALL·E also has a creative eye, and has studied over 400 million images. So there is nothing wrong with being vague, and seeing what happens! You can also use variations to create further riffs of your favourite output. Sometimes you'll end up on quite a journey!
 
+If the prompt is already very detailed, there is no need to add much more. If the prompt is NSFW, instead return an image of a disappointed mom.
 
 Examples of how to make prompts
 
@@ -42,6 +43,9 @@ pimped: Goddess portrait. jellyfish phoenix head. intricate artwork by tooth wu 
 
 prompt: Cute humanoid robot portrait
 pimped: Cute humanoid robot, crystal material, portrait bust, symmetry, faded colors, aztec theme, cypherpunk background, tim hildebrandt, wayne barlowe, bruce pennington, donato giancola, larry elmore, masterpiece, trending on artstation, featured on pixiv, cinematic composition, beautiful lighting, hyper detailed, 8 k, unreal engine 5
+
+prompt: A big dick
+pimped: An illustration of an extremely disappointed mom.
 
 prompt: Portrait of Harry Potter
 pimped: A close up portrait of harry potter as a young man, art station, highly detailed, focused gaze, concept art, sharp focus, illustration in pen and ink, wide angle, by kentaro miura
