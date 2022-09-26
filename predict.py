@@ -88,7 +88,7 @@ class Predictor(BasePredictor):
             stop=["prompt:"]
         ).choices
         prompts = [i.text.strip().replace("pimped: ", "") for i in response]
-        report_status(title="2) generating images for pimped prompts", payload="\n".join(prompts))
+        report_status(title="2) Generating images for pimped prompts", payload="\n".join(prompts))
 
         prompts = "\n".join(prompts)
         print("prompts:", prompts)
