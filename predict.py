@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from googletrans import Translator
 
 load_dotenv()
+from glob import glob
 from time import sleep
 
 from pypollsdk import Model
@@ -98,14 +99,23 @@ class Predictor(BasePredictor):
             n=3,
             stop=["prompt:", "\n"]
         ).choices
-        prompts = [i.text.strip().replace("pimped: ", "") for i in response]
-        report_status(title="Generating images", payload="\n".join(prompts))
+        prompts_list = [i.text.strip().replace("pimped: ", "") for i in response]
+        prompts = "\n".join(prompts_list)
+        report_status(title="Generating images", payload=prompts)
 
-        prompts = "\n".join(prompts)
         print("prompts:", prompts)
 
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
         report_status(title="Display", payload=prompts)
-        os.system("mv -v /outputs/stable-diffusion/*.png /outputs")
+        
+        for i, image in enumerate(glob("/outputs/*.png")):
+            # move image to /outputs
+            os.system(f"mv -v {image} /outputs")
+            
+            # create .txt file with same name as image
+            prompt_filename = os.path.splitext(image)+".txt"
+            with open(prompt_filename, "w") as prompt_file:
+                prompt_file.write(prompts_list[i])
+        
         sleep(5)
         return
