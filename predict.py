@@ -94,5 +94,5 @@ class Predictor(BasePredictor):
         print("prompts:", prompts)
 
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
-        report_status(title="3) Done", payload="\n".join(prompts))
+        report_status(title="3) Done", payload=prompts)
         return
