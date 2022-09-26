@@ -12,6 +12,8 @@ from dotenv import load_dotenv
 from googletrans import Translator
 
 load_dotenv()
+from time import sleep
+
 from pypollsdk import Model
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -104,4 +106,6 @@ class Predictor(BasePredictor):
 
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
         report_status(title="Display", payload=prompts)
+        os.system("mv -v /outputs/stable-diffusion/*.png /outputs")
+        sleep(5)
         return
