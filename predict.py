@@ -28,7 +28,7 @@ If a style is proving elusive, try 'doubling down' with related terms (artists, 
 
 Detailed prompts are great if you know exactly what you're looking for and are trying to get a specific effect. …but DALL·E also has a creative eye, and has studied over 400 million images. So there is nothing wrong with being vague, and seeing what happens! You can also use variations to create further riffs of your favourite output. Sometimes you'll end up on quite a journey!
 
-If the prompt is already very detailed, there is no need to add much more. If the prompt is NSFW, instead return an safe version of the prompt.
+If the prompt is already very detailed, there is no need to add much more.
 
 Examples of how to make prompts
 
