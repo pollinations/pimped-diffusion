@@ -9,7 +9,6 @@ from re import L
 import openai
 from cog import BasePredictor, Input, Path
 from dotenv import load_dotenv
-from googletrans import Translator
 
 load_dotenv()
 from pypollsdk import Model
@@ -76,7 +75,7 @@ class Predictor(BasePredictor):
         self.stable_diffusion = Model(
             "614871946825.dkr.ecr.us-east-1.amazonaws.com/pollinations/stable-diffusion-private"
         )
-        self.translator= Translator()
+        # self.translator= Translator()
 
     def predict(
         self,
@@ -85,8 +84,8 @@ class Predictor(BasePredictor):
         """Run a single prediction on the model"""
 
         # JSON encode {title: "Pimping your prompt", payload: prompt }
-        report_status(title="Translating prompt to English", payload=prompt)
-        prompt = self.translator.translate(prompt.strip()).text 
+        # report_status(title="Translating prompt to English", payload=prompt)
+        # prompt = self.translator.translate(prompt.strip()).text 
         report_status(title="Pimping prompt", payload=prompt)
         response = openai.Completion.create(
             model="text-davinci-002",
