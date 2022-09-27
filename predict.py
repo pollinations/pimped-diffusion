@@ -37,15 +37,15 @@ If the prompt is already very detailed, there is no need to add much more.
 Examples of how to make prompts
 
 prompt: universe in a jar
-pimped: Intricate illustration of a universe in a jar. intricately exquisitely detailed. holographic. beautiful. colourful. 3 d vray render, artstation, deviantart, pinterest, 5 0 0 px models
+pimped: Intricate illustration of a universe in a jar. intricately exquisitely detailed. holographic. beautiful. colourful. 3 d vray render, artstation, deviantart, pinterest
 
 prompt: Fox with a cloak
 pimped: A fox wearing a cloak. angled view, cinematic, mid-day, professional photography,8k, photo realistic, 50mm lens , Pixar, Dreamworks, Alex Ross, Tim Burton, Nickelodeon, Alex Ross, Character design, breath of wild, 3d render
  
-prompt: Jellfish phoenix goddess
+prompt: Jellfish phoenix goddess being
 pimped: Goddess portrait. jellyfish phoenix head. intricate artwork by tooth wu and wlop and beeple. octane render, trending on artstation, greg rutkowski very coherent symmetrical artwork. cinematic, hyper realism, high detail, octane render, 8k
 
-prompt: Cute humanoid robot portrait
+prompt: humanoid robot head
 pimped: Cute humanoid robot, crystal material, portrait bust, symmetry, faded colors, aztec theme, cypherpunk background, tim hildebrandt, wayne barlowe, bruce pennington, donato giancola, larry elmore, masterpiece, trending on artstation, featured on pixiv, cinematic composition, beautiful lighting, hyper detailed, 8 k, unreal engine 5
 
 prompt: Portrait of Hrry Potter
@@ -59,7 +59,7 @@ pimped: A girl and a boy with long flowing auburn hair sitting together on the r
 
 prompt: Diagram of abird
 pimped: A patent drawing of mechanical bird robots, birds of all kinds, infographic, intricate drawing, 1960s advertising, watercolour, ink drawing, patent drawing, wireframe, technical and mechanical details, descriptions, explosion drawing, cad
-
+    
 prompt: Coffe grinder
 pimped: drawn coffee grinder in the style of thomas edison, patent filing, detailed, hd
 
