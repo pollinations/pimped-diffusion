@@ -36,32 +36,38 @@ If the prompt is already very detailed, there is no need to add much more.
 
 Examples of how to make prompts
 
-prompt: A universe in a jar
+prompt: universe in a jar
 pimped: Intricate illustration of a universe in a jar. intricately exquisitely detailed. holographic. beautiful. colourful. 3 d vray render, artstation, deviantart, pinterest, 5 0 0 px models
 
-prompt: A fox wearing a cloak
+prompt: Fox with a cloak
 pimped: A fox wearing a cloak. angled view, cinematic, mid-day, professional photography,8k, photo realistic, 50mm lens , Pixar, Dreamworks, Alex Ross, Tim Burton, Nickelodeon, Alex Ross, Character design, breath of wild, 3d render
  
-prompt: Jellyfish phoenix goddess
+prompt: Jellfish phoenix goddess
 pimped: Goddess portrait. jellyfish phoenix head. intricate artwork by tooth wu and wlop and beeple. octane render, trending on artstation, greg rutkowski very coherent symmetrical artwork. cinematic, hyper realism, high detail, octane render, 8k
 
 prompt: Cute humanoid robot portrait
 pimped: Cute humanoid robot, crystal material, portrait bust, symmetry, faded colors, aztec theme, cypherpunk background, tim hildebrandt, wayne barlowe, bruce pennington, donato giancola, larry elmore, masterpiece, trending on artstation, featured on pixiv, cinematic composition, beautiful lighting, hyper detailed, 8 k, unreal engine 5
 
-prompt: Portrait of Harry Potter
+prompt: Portrait of Hrry Potter
 pimped: A close up portrait of harry potter as a young man, art station, highly detailed, focused gaze, concept art, sharp focus, illustration in pen and ink, wide angle, by kentaro miura
 
 prompt: Artichoke head monster
 pimped: Humanoid figure with an artichoke head, highly detailed, digital art, sharp focus, trending on art station, monster, glowing eyes, anime art style
 
-prompt: A boy and a girl with black short hair in a rowing boat
-pimped: A boy and a girl with long flowing auburn hair sitting together on the rowboat. boy has black short hair, boy has black short hair. atmospheric lighting, long shot, romantic, boy and girl are the focus, trees, river. details, sharp focus, illustration, by jordan grimmer and greg rutkowski, trending artstation, pixiv, digital art
+prompt: A boy and  with black short hair in a rowing boat
+pimped: A girl and a boy with long flowing auburn hair sitting together on the rowboat. boy has black short hair, boy has black short hair. atmospheric lighting, long shot, romantic, boy and girl are the focus, trees, river. details, sharp focus, illustration, by jordan grimmer and greg rutkowski, trending artstation, pixiv, digital art
 
-prompt: Diagram of a bird
+prompt: Diagram of abird
 pimped: A patent drawing of mechanical bird robots, birds of all kinds, infographic, intricate drawing, 1960s advertising, watercolour, ink drawing, patent drawing, wireframe, technical and mechanical details, descriptions, explosion drawing, cad
 
-prompt: Coffee grinder
+prompt: Coffe grinder
 pimped: drawn coffee grinder in the style of thomas edison, patent filing, detailed, hd
+
+prompt: Camera still life
+pimped: Slr camera advertisment, still life, 1 9 7 0 s japan shouwa advertisement, print, nostalgic
+
+prompt: digital fantasy world
+pimped: epic cinematic digital wallpaper of a fantasy world, isometric 3 d, artwork by james gilleard, 
 
 prompt: {}
 pimped:""".format
