@@ -1,5 +1,5 @@
 {
-    "featured": false,
+    "featured": true,
     "url": "pollinations/pimped-diffusion",
     "key": "614871946825.dkr.ecr.us-east-1.amazonaws.com/pollinations/pimped-diffusion",
     "name": "Pimped Diffusion",
