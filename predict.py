@@ -100,7 +100,7 @@ class Predictor(BasePredictor):
         prompts_list = []
         while len(prompts_list) != 3:
             response = openai.Completion.create(
-                model="text-babbage-001",
+                model="text-curie-001",
                 prompt=gpt_prompt(prompt),
                 max_tokens=200,
                 temperature=0.82,
