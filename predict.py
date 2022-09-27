@@ -28,11 +28,8 @@ Adjectives can easily influence multiple factors, e.g: 'art deco' will influence
 
 Even superficially specific prompts have more 'general' effects. For instance, defining a camera or lens ('Sigma 75mm') doesn't just 'create that specific look', it more broadly alludes to 'the kind of photo where the lens/camera appears in the description', which tend to be professional and hence higher-quality.
 
-If a style is proving elusive, try 'doubling down' with related terms (artists, years, media, movement) years, e.g: rather than simply '…by Picasso' , try '…Cubist painting by Pablo Picasso, 1934, colourful, geometric work of Cubism
+Detailed prompts are great if you know exactly what you're looking for and are trying to get a specific effect. But there is nothing wrong with being vague, and seeing what happens!
 
-Detailed prompts are great if you know exactly what you're looking for and are trying to get a specific effect. …but DALL·E also has a creative eye, and has studied over 400 million images. So there is nothing wrong with being vague, and seeing what happens! You can also use variations to create further riffs of your favourite output. Sometimes you'll end up on quite a journey!
-
-If the prompt is already very detailed, there is no need to add much more.
 
 Examples of how to make prompts
 
@@ -97,19 +94,17 @@ class Predictor(BasePredictor):
         report_status(title="Translating", payload=prompt)
         prompt = self.translator.translate(prompt.strip()).text 
         report_status(title="Pimping prompt", payload=prompt)
-        prompts_list = []
-        while len(prompts_list) != 3:
-            response = openai.Completion.create(
-                model="text-curie-001",
-                prompt=gpt_prompt(prompt),
-                max_tokens=200,
-                temperature=0.82,
-                n=3,
-                stop=["prompt:", "\n"]
-            ).choices
-            prompts_list = [i.text.strip().replace("pimped:", "") for i in response]
-            prompts_list = [prompt for prompt in prompts_list if len(prompt) > 0]
-            print("got prompts", len(prompts_list))
+        response = openai.Completion.create(
+            model="text-curie-001",
+            prompt=gpt_prompt(prompt),
+            max_tokens=200,
+            temperature=0.82,
+            n=3,
+            stop=["prompt:", "\n"]
+        ).choices
+        prompts_list = [i.text.strip().replace("pimped:", "") for i in response]
+        prompts_list = [prompt for prompt in prompts_list if len(prompt) > 0]
+        print("got prompts", len(prompts_list))
         prompts = "\n".join(prompts_list)
         report_status(title="Generating images", payload=prompts)
 
