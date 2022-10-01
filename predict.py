@@ -20,6 +20,7 @@ from pypollsdk import Model
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
+
 gpt_prompt = """Prompt Design
 
 You can borrow some photographic prompt terminology (especially for framing) to apply to illustrations: e.g: 'close-up.' If you are generating mockups of 3D art, you can also define how that piece is photographed!
@@ -59,6 +60,9 @@ pimped: A patent drawing of mechanical bird robots, birds of all kinds, infograp
     
 prompt: Coffe grinder
 pimped: drawn coffee grinder in the style of thomas edison, patent filing, detailed, hd
+
+prompt: Colorful digital indigenous toy
+pimped: A colorfull portrait of a selk'nam with a capirote, plastic toy, art toy, by hikari shimoda, al feldstein, mark ryden, yayoi kusama, lisa frank, garbage pail kids, award winning photo, iridiscense, houdini algorithmic generative render, dramatic lighting, volumetric light, accurate and detailed, sharp focus, octane render 8k, zoom out
 
 prompt: Camera still life
 pimped: Slr camera advertisment, still life, 1 9 7 0 s japan shouwa advertisement, print, nostalgic
@@ -109,7 +113,6 @@ class Predictor(BasePredictor):
         report_status(title="Generating images", payload=prompts)
 
         print("prompts:", prompts)
-
         self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
         report_status(title="Display", payload=prompts)
 
