@@ -118,7 +118,7 @@ class Predictor(BasePredictor):
 
         for i, image in enumerate(glob("/outputs/stable-diffusion/*.png")):
             # move image to /outputs
-            os.system(f"mv -v {image} /outputs")
+            os.system(f"cp -v {image} /outputs")
             
             # create .txt file with same name as image
             prompt_filename =  os.path.splitext(os.path.basename(image))[0]+".txt"
