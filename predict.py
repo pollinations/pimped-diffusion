@@ -15,7 +15,7 @@ load_dotenv()
 from glob import glob
 from time import sleep
 
-from pypollsdk import Model
+from pypollsdk import run_model
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -82,11 +82,7 @@ def report_status(**kwargs):
 class Predictor(BasePredictor):
     def setup(self):
         """Load the model into memory to make running multiple predictions efficient"""
-        # self.model = torch.load("./weights.pth")
-        self.stable_diffusion = Model(
-            "614871946825.dkr.ecr.us-east-1.amazonaws.com/pollinations/stable-diffusion-private"
-        )
-        
+
         self.translator= Translator()
 
     def predict(
@@ -114,7 +110,7 @@ class Predictor(BasePredictor):
         report_status(title="Generating images", payload=prompts)
 
         print("prompts:", prompts)
-        self.stable_diffusion.predict({"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
+        run_model("614871946825.dkr.ecr.us-east-1.amazonaws.com/pollinations/stable-diffusion-private", {"prompts": prompts, "num_frames_per_prompt": 1, "diffusion_steps": -50, "prompt_scale": 15}, "/outputs/stable-diffusion")
         report_status(title="Display", payload=prompts)
 
         for i, image in enumerate(glob("/outputs/stable-diffusion/*.png")):
