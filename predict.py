@@ -86,6 +86,7 @@ class Predictor(BasePredictor):
         self.stable_diffusion = Model(
             "614871946825.dkr.ecr.us-east-1.amazonaws.com/pollinations/stable-diffusion-private"
         )
+        
         self.translator= Translator()
 
     def predict(
