@@ -26,5 +26,6 @@ build:
     - "git clone https://github.com/pollinations/pollinations-ipfs.git"
     - "cd pollinations-ipfs && npm run install_backend"
     - "pip install git+https://github.com/pollinations/pypollsdk.git"
+    
   
 predict: "predict.py:Predictor"
